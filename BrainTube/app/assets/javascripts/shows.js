@@ -34,17 +34,26 @@ $(document).ready(function() {
                     VAPP.showModal(function(message) {}, 'Oops ...', null, 'You are not checked into this show', 'Check in and then try again', false);
                     VAPP.close(function(m){});
                     return;
+                }
                 else {
-                    $.ajax({
+                    
+                    VAPP.getUserInfo(function(userMessage){
+                        var userInfo = JSON.parse(userMessage);
+                        var gender = userInfo.data.gender;
+                        var displayName = userInfo.data.displayName;
+                        var guid = userInfo.data.guid;
+                        var zipcode = userInfo.data.zipcode;
+                        var primaryTVProvider = userInfo.data.primaryTVProvider;
+                        
+                        $.ajax({
                         type: "POST",
                           url: "/shows",
-                          data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres,
-                          // success: function(){
+                          data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+displayName+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primaryTVProvider,
+                          // success: function(){:gender, :display_name, :guid, :zipcode, :primary_tv_provider
                           // alert("success");
                           // }
-                    });
-                }
-
+                        });
+                    })
                 }
 
                 var showNameEncoded = showName.replace(/ /g, '-').toLowerCase();
