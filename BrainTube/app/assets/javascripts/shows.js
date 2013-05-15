@@ -15,9 +15,9 @@ $(document).ready(function() {
 
             // Name of the current show
             var showTitle = showInfo.data.program_data.program_title;
-            var showProgramId = showInfo.data.program_data.program_title;
-            var showCategory = showInfo.data.program_data.program_title;
-            var showAdTargetGenres = showInfo.data.program_data.program_title;
+            var showProgramId = showInfo.data.program_data.program_id;
+            var showCategory = showInfo.data.program_data.program_category;
+            var showAdTargetGenres = showInfo.data.program_data.ad_target_genres;
             
 
             // Display the show name in the sub header bar
@@ -38,7 +38,6 @@ $(document).ready(function() {
                     $.ajax({
                         type: "POST",
                           url: "/shows",
-                          :title, :program_id, :category, :ad_target_genres
                           data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres,
                           // success: function(){
                           // alert("success");
