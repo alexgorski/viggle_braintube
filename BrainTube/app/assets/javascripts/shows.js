@@ -2,9 +2,9 @@ $(document).ready(function() {
     function onBridgeIsReady() {
     // Display our apps title in the header bar
 
-        VAPP.setTitleBarTitle(function(message) {}, 'Reviews');
+        VAPP.setTitleBarTitle(function(message) {}, 'Brain Tube');
 
-        VAPP.getCurrentShow(function (message) {
+        VAPP.getCurrentShow(function(message) {
 
             var showInfo = JSON.parse(message);
 
@@ -14,7 +14,10 @@ $(document).ready(function() {
             }
 
             // Name of the current show
-            var showName = showInfo.data.program_data.program_title;
+            var showTitle = showInfo.data.program_data.program_title;
+            var showProgramId = showInfo.data.program_data.program_title;
+            var showCategory = showInfo.data.program_data.program_title;
+            var showAdTargetGenres = showInfo.data.program_data.program_title;
             
 
             // Display the show name in the sub header bar
@@ -31,6 +34,17 @@ $(document).ready(function() {
                     VAPP.showModal(function(message) {}, 'Oops ...', null, 'You are not checked into this show', 'Check in and then try again', false);
                     VAPP.close(function(m){});
                     return;
+                else {
+                    $.ajax({
+                        type: "POST",
+                          url: "/shows",
+                          :title, :program_id, :category, :ad_target_genres
+                          data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres,
+                          // success: function(){
+                          // alert("success");
+                          // }
+                    });
+                }
 
                 }
 
