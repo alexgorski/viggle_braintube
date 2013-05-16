@@ -41,10 +41,10 @@ $(document).ready(function() {
                     VAPP.getUserInfo(function(userMessage){
                         var userInfo = JSON.parse(userMessage);
                         var gender = userInfo.data.gender;
-                        var displayName = userInfo.data.displayName;
+                        var displayName = userInfo.data.displayname;
                         var guid = userInfo.data.guid;
                         var zipcode = userInfo.data.zipcode;
-                        var primaryTVProvider = userInfo.data.primaryTVProvider;
+                        var primaryTVProvider = userInfo.data.primarytvprovider;
                         
                         $.ajax({
                           type: "POST",
