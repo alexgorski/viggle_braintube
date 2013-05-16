@@ -11,6 +11,9 @@ $(document).ready(function() {
             if (showInfo.status !== 'success') {
                 VAPP.showModal(function(message) {}, 'Oops ...', null, 'Unable to get show info.', 'Please try again.', false);
                 return;
+            else 
+                VAPP.showModal(function(message) {}, 'Success', null, 'Got show info.', 'Please continue testing.', false);
+                return;
             }
 
             // Name of the current show
@@ -21,7 +24,7 @@ $(document).ready(function() {
             
 
             // Display the show name in the sub header bar
-            VAPP.setTitleBarSubTitle(function(message) {}, showName);
+            VAPP.setTitleBarSubTitle(function(message) {}, showTitle);
 
 
             //Check if user is checked in
