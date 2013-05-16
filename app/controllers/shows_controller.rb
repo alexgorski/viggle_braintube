@@ -10,10 +10,12 @@ class ShowsController < ApplicationController
     @show.category = params[:category]
     @show.ad_target_genres = params[:ad_target_genres]
     #need logic that builds a viewer
-    @show.viewers.build(:gender => params[],:display_name => params[], :guid => params[], :zipcode => params[], :primary_tv_provider => params[])
+    @show.viewers.build(:gender => params[:gender],
+        :display_name => params[:display_name], 
+        :guid => params[:guid],
+        :zipcode => params[:zipcode],
+        :primary_tv_provider => params[:primary_tv_provider])
     @show.save
   end
 
 end
-
-:gender, :display_name, :guid, :zipcode, :primary_tv_provider
