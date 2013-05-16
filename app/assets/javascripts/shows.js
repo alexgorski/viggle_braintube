@@ -42,7 +42,7 @@ $(document).ready(function() {
                         var userInfo = JSON.parse(userMessage);
                         var gender = userInfo.data.gender;
                         var displayName = userInfo.data.displayname;
-                        var guid = userInfo.data.guid;
+                        var guid = userInfo.data.GUID;
                         var zipcode = userInfo.data.zipcode;
                         var primaryTVProvider = userInfo.data.primarytvprovider;
                         
@@ -52,7 +52,7 @@ $(document).ready(function() {
                           data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+displayName+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primaryTVProvider,
                           });
 
-                          $('#wrapper').append(showTitle+showProgramId+displayName+primaryTVProvider);
+                          $('#wrapper').append(showTitle+showProgramId+displayName+primaryTVProvider+guid);
 
                     });
                 }
