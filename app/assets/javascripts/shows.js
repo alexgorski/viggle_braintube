@@ -52,7 +52,7 @@ $(document).ready(function() {
                           data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+displayName+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primaryTVProvider,
                           });
 
-                          $('#wrapper').append('<h1>'+showTitle+ showProgramId+ displayName+ primaryTVProvider'</h1>');
+                          $('#wrapper').append(showTitle+showProgramId+displayName+primaryTVProvider);
 
                     });
                 }
