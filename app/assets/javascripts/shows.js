@@ -11,9 +11,7 @@ $(document).ready(function() {
             if (showInfo.status !== 'success') {
                 VAPP.showModal(function(message) {}, 'Oops ...', null, 'Unable to get show info.', 'Please try again.', false);
                 return;
-            else 
-                VAPP.showModal(function(message) {}, 'Success', null, 'Got show info.', 'Please continue testing.', false);
-                return;
+            
             }
 
             // Name of the current show
