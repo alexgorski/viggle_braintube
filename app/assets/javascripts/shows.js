@@ -41,18 +41,18 @@ $(document).ready(function() {
                     VAPP.getUserInfo(function(userMessage){
                         var userInfo = JSON.parse(userMessage);
                         var gender = userInfo.data.gender;
-                        var displayName = userInfo.data.displayname;
-                        var guid = userInfo.data.GUID;
+                        var displayName = userInfo.data.display_name;
+                        var guid = userInfo.data.user_guid;
                         var zipcode = userInfo.data.zipcode;
-                        var primaryTVProvider = userInfo.data.primarytvprovider;
+                        var primary_tv_provider = userInfo.data.primary_tv_provider;
                         
                         $.ajax({
                           type: "POST",
                           url: "/shows",
-                          data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+displayName+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primaryTVProvider,
+                          data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+displayName+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primary_tv_provider,
                           });
 
-                          $('#wrapper').append(userMessage);
+                          $('#wrapper').append(displayName+guid+primary_tv_provider);
 
                     });
                 }
