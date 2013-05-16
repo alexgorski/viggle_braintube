@@ -47,11 +47,11 @@ $(document).ready(function() {
                         var primaryTVProvider = userInfo.data.primaryTVProvider;
                         
                         $.ajax({
-                            type: "POST",
+                          type: "POST",
                           url: "/shows",
                           data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+displayName+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primaryTVProvider,
                           }).done(function(){
-                            $('#wrapper').append('<h1>'+showTitle+'</h1>');
+                            $('#wrapper').append('<h1>'Testing'</h1>');
                           });
 
                     });
