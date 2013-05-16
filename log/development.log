@@ -195,3 +195,4 @@ Migrating to CreateViewers (20130515203811)
   [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130515203811')
   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
   [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml

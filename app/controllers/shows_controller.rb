@@ -5,7 +5,6 @@ class ShowsController < ApplicationController
   end
   def create
     @show = Show.find_or_create_by_title(params[:title])
-    @show.title = params[:title]
     @show.program_id = params[:program_id]
     @show.category = params[:category]
     @show.ad_target_genres = params[:ad_target_genres]
