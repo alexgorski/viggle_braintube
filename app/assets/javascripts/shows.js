@@ -50,11 +50,11 @@ $(document).ready(function() {
                         type: "POST",
                           url: "/shows",
                           data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+displayName+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primaryTVProvider,
-                          // success: function(){:gender, :display_name, :guid, :zipcode, :primary_tv_provider
-                          // alert("success");
-                          // }
+                          success: function(){
+                            $('#wrapper').append('<p>' + data + '</p>');
+                          }
                         });
-                        $('#question').append('<li>'+data+'</li>');
+
                     })
                 }
 
