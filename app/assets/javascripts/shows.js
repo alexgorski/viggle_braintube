@@ -51,7 +51,7 @@ $(document).ready(function() {
                           url: "/shows",
                           data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+displayName+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primaryTVProvider,
                           success: function(){
-                            $('#wrapper').append("<p>title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+displayName+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primaryTVProvider"</p>");
+                            $('#wrapper').append('<p>title='+showTitle+'</p>');
                           }
                         });
 
