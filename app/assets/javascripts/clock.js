@@ -1,10 +1,10 @@
-
 $(document).ready(function() {
 
-  $(".start").click(function () {
+  $(".start").click(function() {
     var Timer;
     var TotalSeconds;
     var question = questions[0]
+    
     CreateTimer("timer", 120);
     function CreateTimer(TimerID, Time) {
       Timer = document.getElementById(TimerID);
@@ -12,34 +12,28 @@ $(document).ready(function() {
       UpdateTimer()
     }
     
-    CreateInputBox("inputs");
-    function CreateInputBox(InputID){
-      
+    CreateInputBox();
+    function CreateInputBox(InputID){  
       $('#inputs').append("<input type='text' id='input'></input>");
+      $('#inputs').append("<button class='start' type='button' id='submit' value=''>Submit</button>");
     }
     
-    function ShowQuestion(Questions){
-      var question =
-      $('.question').append(data);
+    ShowQuestion(questionBody)
+    function ShowQuestion(Question){
+      $('.question').append(Question);
     }
-    
-    
+      
     function Tick() {
-      if (TotalSeconds == 0) {
-        var name = $("#start_line input").val();
-        var correct = $("#total_right").text();
-        var incorrect = $("#total_wrong").text();
-        var op = $("#operator").text();
-        var lev = $("#level").text();
-        
+      if (TotalSeconds == 0) { 
         //use jQuery to add each element needed for data
-        $.ajax({
+        $.ajax({ //figure out how to score the answer 
+          //and pass it to rails viewers#update and get back next question
           type: "POST",
           url: "/questions",
           data: "name="+name+"&right="+correct+"&wrong="+incorrect+"&operator="+"a"+"&level="+lev,
-          success: function(){
-          alert("success");
-          }
+          success: function(data){
+            setQuestion(JSON.parse(data));
+          };
         });
         return false;
         
@@ -47,11 +41,17 @@ $(document).ready(function() {
       TotalSeconds -= 1;
 
       UpdateTimer();
+      
+      $('#submit').click(function(){StopTime(0);};
     }
 
     function UpdateTimer() {
       Timer.innerHTML = TotalSeconds;
       setTimeout(Tick, 1000);
+    }
+    
+    function StopTime(time) {
+      TotalSeconds = time;
     }
   });
 });

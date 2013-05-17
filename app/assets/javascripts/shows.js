@@ -4,7 +4,7 @@ $(document).ready(function() {
     var questionTitle;
     var questionShow_ID;
     var questionViewer_ID;
-    
+
     function onBridgeIsReady() {
     // Display our apps title in the header bar
 
@@ -51,27 +51,20 @@ $(document).ready(function() {
                         var guid = userInfo.data.user_guid;
                         var zipcode = userInfo.data.zipcode;
                         var primary_tv_provider = userInfo.data.primary_tv_provider;
-                        
-                        
-                        $.getJSON('/shows/SOMETHING',function(data){
-                            $('.question').append(data);
-                        });
 
                         $.ajax({
                           type: "POST",
                           url: "/shows",
                           data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+display_name+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primary_tv_provider,
                           success: function(data){
-                            $('.question').append(data)
-                            setQuestion(JSON.parse(data))
-
-                        };
+                            setQuestion(JSON.parse(data));
+                          };
                         });
 
                         
                           
 
-                          $('#wrapper').append(displayName+guid+primary_tv_provider);
+                          //$('#wrapper').append(displayName+guid+primary_tv_provider);
 
                     });
                 }
@@ -93,10 +86,13 @@ $(document).ready(function() {
                     
 
         });        
-    function setQuestion(question){
-        //n
-        $('.question').text(question.body);
-    }
+        function setQuestion(question){
+            questionBody = question.body;
+            questionAnswer = question.answer;
+            questionTitle = question.title;
+            questionShow_ID = question.show_id;
+            questionViewer_ID = question.viewer_id;
+        }
     }
    
     // Kick off script
