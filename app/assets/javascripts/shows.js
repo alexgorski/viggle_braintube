@@ -1,5 +1,10 @@
 $(document).ready(function() {
-    questions = []
+    var questionBody;
+    var questionAnswer;
+    var questionTitle;
+    var questionShow_ID;
+    var questionViewer_ID;
+    
     function onBridgeIsReady() {
     // Display our apps title in the header bar
 

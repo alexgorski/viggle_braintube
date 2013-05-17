@@ -562,3 +562,22 @@ ActionController::RoutingError (No route matches [POST] "/users"):
 
   Rendered /Users/AlexGorski/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (14.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateShows (20130515165753)
+Migrating to CreateCharacters (20130515190435)
+Migrating to CreateQuestions (20130515191201)
+Migrating to AddShowIdColumnToQuestions (20130515194728)
+Migrating to CreateViewers (20130515203811)
+Migrating to AddShowIdToViewer (20130516195617)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (82.2ms)[0m  [1mALTER TABLE "viewers" ADD COLUMN "show_id" integer[0m
+  [1m[35m (8.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130516195617')
+  [1m[36m (40.1ms)[0m  [1mCOMMIT[0m
+Migrating to AddQuestionToViewer (20130517194246)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "questions" ADD COLUMN "viewer_id" integer[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130517194246')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
