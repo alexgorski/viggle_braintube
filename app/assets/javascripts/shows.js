@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    questions = []
     function onBridgeIsReady() {
     // Display our apps title in the header bar
 
@@ -41,42 +42,59 @@ $(document).ready(function() {
                     VAPP.getUserInfo(function(userMessage){
                         var userInfo = JSON.parse(userMessage);
                         var gender = userInfo.data.gender;
-                        var displayName = userInfo.data.display_name;
+                        var display_name = userInfo.data.display_name;
                         var guid = userInfo.data.user_guid;
                         var zipcode = userInfo.data.zipcode;
                         var primary_tv_provider = userInfo.data.primary_tv_provider;
                         
+                        
+                        $.getJSON('/shows/SOMETHING',function(data){
+                            $('.question').append(data);
+                        });
+
                         $.ajax({
                           type: "POST",
                           url: "/shows",
-                          data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+displayName+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primary_tv_provider,
-                          });
+                          data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+display_name+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primary_tv_provider,
+                          success: function(data){
+                            $('.question').append(data)
+                            setQuestion(JSON.parse(data))
+
+                        };
+                        });
+
+                        
+                          
 
                           $('#wrapper').append(displayName+guid+primary_tv_provider);
 
                     });
                 }
 
-                var showNameEncoded = showName.replace(/ /g, '-').toLowerCase();
+                // var showNameEncoded = showName.replace(/ /g, '-').toLowerCase();
 
-                var urlList = {
-                    'Metacritic' : 'http://www.metacritic.com/tv/' + showNameEncoded,
-                    'TV' : 'http://www.tv.com/shows/' + showNameEncoded,
-                    'MSN' : 'http://tv.msn.com/tv/series/' + showNameEncoded,
-                    'Jinni' : 'http://jinni.com/tv/' + showNameEncoded
-                };
+                // var urlList = {
+                //     'Metacritic' : 'http://www.metacritic.com/tv/' + showNameEncoded,
+                //     'TV' : 'http://www.tv.com/shows/' + showNameEncoded,
+                //     'MSN' : 'http://tv.msn.com/tv/series/' + showNameEncoded,
+                //     'Jinni' : 'http://jinni.com/tv/' + showNameEncoded
+                // };
 
-                for (url in urlList) {
-                    $('#reviews-list').append('<li><a href="' + urlList[url] + '">' + url + '</a></li>');
-                };
+                // for (url in urlList) {
+                //     $('#reviews-list').append('<li><a href="' + urlList[url] + '">' + url + '</a></li>');
+                // };
 
             });
                     
 
         });        
-
+    function setQuestion(question){
+        //n
+        $('.question').text(question.body);
     }
-
+    }
+   
     // Kick off script
     document.addEventListener('VAPPReady', onBridgeIsReady, true);
 })();
+

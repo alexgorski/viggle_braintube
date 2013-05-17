@@ -196,3 +196,369 @@ Migrating to CreateViewers (20130515203811)
   [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
   [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-17 13:33:55 -0400
+Processing by ShowsController#index as HTML
+  Rendered shows/index.html.erb within layouts/application (2.9ms)
+Compiled shows.css  (30ms)  (pid 10789)
+Compiled application.css  (1ms)  (pid 10789)
+Compiled shows.js  (0ms)  (pid 10789)
+Compiled clock.js  (1ms)  (pid 10789)
+Compiled application.js  (41ms)  (pid 10789)
+Completed 200 OK in 534ms (Views: 532.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-17 13:33:56 -0400
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-17 13:33:56 -0400
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/shows.css?body=1" for 127.0.0.1 at 2013-05-17 13:33:56 -0400
+Served asset /shows.css - 200 OK (8ms)
+
+
+Started GET "/assets/shows.js?body=1" for 127.0.0.1 at 2013-05-17 13:33:56 -0400
+Served asset /shows.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-17 13:33:56 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-17 13:33:56 -0400
+Served asset /application.js - 304 Not Modified (101ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-05-17 13:33:57 -0400
+Served asset /clock.js - 200 OK (2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-05-17 13:36:19 -0400
+
+ActionController::RoutingError (No route matches [POST] "/users"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/AlexGorski/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/AlexGorski/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/AlexGorski/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/AlexGorski/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-17 14:11:47 -0400
+Processing by ShowsController#index as HTML
+  Rendered shows/index.html.erb within layouts/application (0.1ms)
+Compiled clock.js  (0ms)  (pid 10789)
+Compiled shows.js  (0ms)  (pid 10789)
+Compiled application.js  (59ms)  (pid 10789)
+Completed 200 OK in 263ms (Views: 262.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-17 14:11:47 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shows.css?body=1" for 127.0.0.1 at 2013-05-17 14:11:47 -0400
+Served asset /shows.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-17 14:11:47 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-05-17 14:11:47 -0400
+Served asset /clock.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-17 14:11:47 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shows.js?body=1" for 127.0.0.1 at 2013-05-17 14:11:47 -0400
+Served asset /shows.js - 200 OK (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-17 14:11:47 -0400
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-17 14:13:03 -0400
+Processing by ShowsController#index as HTML
+  Rendered shows/index.html.erb within layouts/application (0.0ms)
+Compiled clock.js  (0ms)  (pid 10789)
+Compiled application.js  (3ms)  (pid 10789)
+Completed 200 OK in 73ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shows.css?body=1" for 127.0.0.1 at 2013-05-17 14:13:03 -0400
+Served asset /shows.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-05-17 14:13:03 -0400
+Served asset /clock.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-17 14:13:03 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-17 14:13:03 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-17 14:13:03 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shows.js?body=1" for 127.0.0.1 at 2013-05-17 14:13:03 -0400
+Served asset /shows.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-17 14:13:03 -0400
+Served asset /application.js - 304 Not Modified (44ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-05-17 14:15:05 -0400
+
+ActionController::RoutingError (No route matches [POST] "/users"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/AlexGorski/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/AlexGorski/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/AlexGorski/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/AlexGorski/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-17 14:15:58 -0400
+Processing by ShowsController#index as HTML
+  Rendered shows/index.html.erb within layouts/application (0.1ms)
+Compiled clock.js  (0ms)  (pid 10789)
+Compiled application.js  (36ms)  (pid 10789)
+Completed 200 OK in 254ms (Views: 253.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-17 14:15:58 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-05-17 14:15:58 -0400
+Served asset /clock.js - 200 OK (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-17 14:15:58 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shows.css?body=1" for 127.0.0.1 at 2013-05-17 14:15:58 -0400
+Served asset /shows.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-17 14:15:58 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/shows.js?body=1" for 127.0.0.1 at 2013-05-17 14:15:58 -0400
+Served asset /shows.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-17 14:15:58 -0400
+Served asset /application.js - 304 Not Modified (19ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-17 14:16:48 -0400
+Processing by ShowsController#index as HTML
+  Rendered shows/index.html.erb within layouts/application (0.0ms)
+Compiled clock.js  (0ms)  (pid 10789)
+Compiled application.js  (3ms)  (pid 10789)
+Completed 200 OK in 72ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-17 14:16:48 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-05-17 14:16:48 -0400
+Served asset /clock.js - 200 OK (1ms)
+
+
+Started GET "/assets/shows.css?body=1" for 127.0.0.1 at 2013-05-17 14:16:48 -0400
+Served asset /shows.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-17 14:16:48 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shows.js?body=1" for 127.0.0.1 at 2013-05-17 14:16:48 -0400
+Served asset /shows.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-17 14:16:48 -0400
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-17 14:16:48 -0400
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-05-17 14:18:50 -0400
+
+ActionController::RoutingError (No route matches [POST] "/users"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/AlexGorski/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/AlexGorski/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/AlexGorski/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/AlexGorski/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-17 14:20:51 -0400
+Processing by ShowsController#index as HTML
+  Rendered shows/index.html.erb within layouts/application (0.1ms)
+Compiled clock.js  (0ms)  (pid 10789)
+Compiled application.js  (25ms)  (pid 10789)
+Completed 200 OK in 234ms (Views: 233.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/shows.css?body=1" for 127.0.0.1 at 2013-05-17 14:20:51 -0400
+Served asset /shows.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-17 14:20:51 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-05-17 14:20:51 -0400
+Served asset /clock.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-17 14:20:51 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shows.js?body=1" for 127.0.0.1 at 2013-05-17 14:20:51 -0400
+Served asset /shows.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-17 14:20:51 -0400
+Served asset /application.js - 304 Not Modified (23ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-17 14:21:23 -0400
+Processing by ShowsController#index as HTML
+  Rendered shows/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-05-17 14:21:23 -0400
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/shows.css?body=1" for 127.0.0.1 at 2013-05-17 14:21:23 -0400
+Served asset /shows.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-05-17 14:21:23 -0400
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-17 14:21:23 -0400
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/clock.js?body=1" for 127.0.0.1 at 2013-05-17 14:21:23 -0400
+Served asset /clock.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/shows.js?body=1" for 127.0.0.1 at 2013-05-17 14:21:23 -0400
+Served asset /shows.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-17 14:21:23 -0400
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2013-05-17 14:23:27 -0400
+
+ActionController::RoutingError (No route matches [POST] "/users"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/AlexGorski/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/AlexGorski/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/AlexGorski/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/AlexGorski/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+Connecting to database specified by database.yml

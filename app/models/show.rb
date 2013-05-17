@@ -3,4 +3,5 @@ class Show < ActiveRecord::Base
 
   has_many :characters
   has_many :viewers
+  has_many :questions
 end
