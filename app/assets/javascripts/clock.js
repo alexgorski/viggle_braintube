@@ -1,7 +1,8 @@
 $(document).ready(function() {
 
   $(".start").click(function() {
-    var Timer, TotalSeconds
+    var Timer, 
+    var TotalSeconds
     
     CreateTimer("timer", 120);
     function CreateTimer(TimerID, Time) {
