@@ -4,7 +4,7 @@ $(document).ready(function() {
     var questionTitle,
     var questionShow_ID,
     var questionViewer_ID
-    
+
     function onBridgeIsReady() {
     // Display our apps title in the header bar
 
@@ -37,27 +37,26 @@ $(document).ready(function() {
                     return;
                 }
                 
-                else {
-                    VAPP.getUserInfo(function(userMessage){
-                        var userInfo = JSON.parse(userMessage);
-                        var gender = userInfo.data.gender;
-                        var display_name = userInfo.data.display_name;
-                        var guid = userInfo.data.user_guid;
-                        var zipcode = userInfo.data.zipcode;
-                        var primary_tv_provider = userInfo.data.primary_tv_provider;
+                            else {
+                                VAPP.getUserInfo(function(userMessage){
+                                    var userInfo = JSON.parse(userMessage);
+                                    var gender = userInfo.data.gender;
+                                    var display_name = userInfo.data.display_name;
+                                    var guid = userInfo.data.user_guid;
+                                    var zipcode = userInfo.data.zipcode;
+                                    var primary_tv_provider = userInfo.data.primary_tv_provider;
 
-                        $.ajax({
-                          type: "POST",
-                          url: "/shows",
-                          data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+display_name+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primary_tv_provider,
-                          success: function(data){
-                            var parsedData = JSON.parse(data);
-                            setQuestion(parsedData);
-                          };
-                        });
-                          //$('#wrapper').append(displayName+guid+primary_tv_provider);
-                    });
-                }
+                                    $.ajax({
+                                      type: "POST",
+                                      url: "/shows",
+                                      data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+display_name+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primary_tv_provider,
+                                      success: function(data){
+                                        var parsedData = JSON.parse(data);
+                                        setQuestion(parsedData);
+                                      };
+                                    });
+                                });
+                            }
             });
         });                
     }
