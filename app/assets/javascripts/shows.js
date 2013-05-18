@@ -39,8 +39,8 @@ $(document).ready(function() {
                                       success: function(data){
                                         var parsedData = JSON.parse(data);
                                         setQuestion(parsedData);
-                                      };
-                                    })
+                                      }
+                                    });
                                 });
                             }
             });
