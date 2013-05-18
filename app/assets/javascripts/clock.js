@@ -9,7 +9,7 @@ $(document).ready(function() {
     function CreateTimer(TimerID, Time) {
       Timer = document.getElementById(TimerID);
       TotalSeconds = Time;
-      UpdateTimer()
+      UpdateTimer();
     }
     
     CreateInputBox();

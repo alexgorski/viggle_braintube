@@ -57,7 +57,8 @@ $(document).ready(function() {
                           url: "/shows",
                           data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+display_name+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primary_tv_provider,
                           success: function(data){
-                            setQuestion(JSON.parse(data));
+                            parsedData = JSON.parse(data);
+                            setQuestion(parsedData);
                           };
                         });
 

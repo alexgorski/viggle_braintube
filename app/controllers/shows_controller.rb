@@ -1,5 +1,4 @@
-class ShowsController < ApplicationController
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                              
 
   def index
   end
@@ -16,9 +15,7 @@ class ShowsController < ApplicationController
         :primary_tv_provider => params[:primary_tv_provider])
     @show.save
     # if i do a $.getJSON get request passing the above data, can i then respond with
-    @questions = Question.where(:show_id => @show.id, :viewer_id => nil).all
-    respond_to do |format|
-      format.js {render :json => @questions}
+    @questions = Question.where(:show_id => @show.id, :viewer_id => nil).all           s}
     end
   end
 
