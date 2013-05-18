@@ -12,7 +12,7 @@ $(document).ready(function() {
     }
     
     CreateInputBox();
-    function CreateInputBox(InputID){  
+    function CreateInputBox(){  
       $('#inputs').append("<input type='text' id='input'></input>");
       $('#inputs').append("<button class='start' type='button' id='submit' value=''>Submit</button>");
     }
