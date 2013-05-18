@@ -39,6 +39,6 @@ $(document).ready(function() {
     }   
     $('#submit').click(function(){
         StopTime(0);
-    };
+    });
   });  
 })
