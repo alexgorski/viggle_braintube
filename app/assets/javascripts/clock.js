@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
 
-  $(".start").click(function() {
+  $('.start').click(function() {
     var Timer, 
     var TotalSeconds
     
