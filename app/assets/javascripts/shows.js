@@ -4,6 +4,7 @@ $(document).ready(function() {
     var questionTitle,
     var questionShow_ID,
     var questionViewer_ID
+    
     function onBridgeIsReady() {
     // Display our apps title in the header bar
 
@@ -63,7 +64,7 @@ $(document).ready(function() {
    
     // Kick off script
     document.addEventListener('VAPPReady', onBridgeIsReady, true);
-    
+
 
     function setQuestion(question){
         questionBody = question.body;
