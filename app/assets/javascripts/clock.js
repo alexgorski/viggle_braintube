@@ -46,8 +46,9 @@ $(document).ready(function() {
     function StopTime(time) {
       TotalSeconds = time;
     }
+    
     $('#submit').click(function(){
         StopTime(0);
     };
   });  
-});
+})
