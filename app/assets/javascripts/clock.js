@@ -26,7 +26,7 @@ $(document).ready(function() {
           //and pass it to rails viewers#update and get back next question
           type: "POST",
           url: "/questions",
-          data: "title="title,
+          data: "title="+questionTitle,
           success: function(data){
             var parsedData = JSON.parse(data);
             setQuestion(parsedData);};
