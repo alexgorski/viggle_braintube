@@ -14,7 +14,7 @@ $(document).ready(function() {
     CreateInputBox();
     function CreateInputBox(){  
       $('#inputs').append("<input type='text' id='input'></input>");
-      $('#inputs').append("<button class='start' type='button' id='submit' value=''>Submit</button>");
+      $('#inputs').append("<button class='submit' type='button' id='submit' value=''>Submit</button>");
     }
     
     ShowQuestion(questionBody);
@@ -29,7 +29,7 @@ $(document).ready(function() {
           //and pass it to rails viewers#update and get back next question
           type: "POST",
           url: "/questions",
-          data: "name="+name+"&right="+correct+"&wrong="+incorrect+"&operator="+"a"+"&level="+lev,
+          data: "title="title,
           success: function(data){
             var parsedData = JSON.parse(data);
             setQuestion(parsedData);
