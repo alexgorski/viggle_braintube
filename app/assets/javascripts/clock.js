@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   $(".start").click(function() {
     var Timer, 
     var TotalSeconds
@@ -8,19 +7,16 @@ $(document).ready(function() {
     function CreateTimer(TimerID, Time) {
       Timer = document.getElementById(TimerID);
       TotalSeconds = Time;
-      UpdateTimer();
-    }
+      UpdateTimer();}
     
     CreateInputBox();
     function CreateInputBox(){  
       $('#inputs').append("<input type='text' id='input'></input>");
-      $('#inputs').append("<button class='submit' type='button' id='submit' value=''>Submit</button>");
-    }
+      $('#inputs').append("<button class='submit' type='button' id='submit' value=''>Submit</button>");}
     
     ShowQuestion(questionBody);
     function ShowQuestion(question){
-      $('.question').append(question);
-    }
+      $('.question').append(question);}
       
     function Tick() {
       if (TotalSeconds == 0) { 
@@ -32,19 +28,13 @@ $(document).ready(function() {
           data: "title="title,
           success: function(data){
             var parsedData = JSON.parse(data);
-            setQuestion(parsedData);
-          };
+            setQuestion(parsedData);};
         });
         return false;
-        
       }
       TotalSeconds -= 1;
 
       UpdateTimer();
-      
-      $('#submit').click(function(){
-        StopTime(0);
-      };
     }
 
     function UpdateTimer() {
@@ -55,5 +45,8 @@ $(document).ready(function() {
     function StopTime(time) {
       TotalSeconds = time;
     }
-  });
+    $('#submit').click(function(){
+        StopTime(0);
+    };
+  });  
 });
