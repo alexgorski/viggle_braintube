@@ -1,9 +1,5 @@
 $(document).ready(function() {
-    var questionBody,
-    var questionAnswer,
-    var questionTitle,
-    var questionShow_ID,
-    var questionViewer_ID
+    var questionBody, questionAnswer, questionTitle, questionShow_ID, questionViewer_ID;
 
     function onBridgeIsReady() {
     // Display our apps title in the header bar
@@ -72,5 +68,5 @@ $(document).ready(function() {
         questionShow_ID = question.show_id;
         questionViewer_ID = question.viewer_id;
     }
-});
+})
 
