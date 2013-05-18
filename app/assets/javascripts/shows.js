@@ -43,6 +43,7 @@ $(document).ready(function() {
                     VAPP.close(function(m){});
                     return;
                 }
+                
                 else {
                     VAPP.getUserInfo(function(userMessage){
                         var userInfo = JSON.parse(userMessage);
@@ -60,7 +61,7 @@ $(document).ready(function() {
                             var parsedData = JSON.parse(data);
                             setQuestion(parsedData);
                           };
-                        });
+                        })
                           //$('#wrapper').append(displayName+guid+primary_tv_provider);
                     });
                 }
