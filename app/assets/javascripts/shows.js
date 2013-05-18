@@ -1,15 +1,10 @@
 $(document).ready(function() {
     var questionBody, questionAnswer, questionTitle, questionShow_ID, questionViewer_ID;
-
     function onBridgeIsReady() {
     // Display our apps title in the header bar
-
         VAPP.setTitleBarTitle(function(message) {}, 'Brain Tube');
-
         VAPP.getCurrentShow(function(message) {
-
             var showInfo = JSON.parse(message);
-
             if (showInfo.status !== 'success') {
                 VAPP.showModal(function(message) {}, 'Oops ...', null, 'Unable to get show info.', 'Please try again.', false);
                 return;
@@ -23,16 +18,12 @@ $(document).ready(function() {
             VAPP.setTitleBarSubTitle(function(message) {}, showTitle);
             //Check if user is checked in
             VAPP.getCurrentShowCheckInOffset(function(message){
-
                 var checkInInfo = JSON.parse(message);
-
                 if (!checkInInfo.data.offset > 0) {
-
                     VAPP.showModal(function(message) {}, 'Oops ...', null, 'You are not checked into this show', 'Check in and then try again', false);
                     VAPP.close(function(m){});
                     return;
-                }
-                
+                }                
                             else {
                                 VAPP.getUserInfo(function(userMessage){
                                     var userInfo = JSON.parse(userMessage);
@@ -41,7 +32,6 @@ $(document).ready(function() {
                                     var guid = userInfo.data.user_guid;
                                     var zipcode = userInfo.data.zipcode;
                                     var primary_tv_provider = userInfo.data.primary_tv_provider;
-
                                     $.ajax({
                                       type: "POST",
                                       url: "/shows",
@@ -55,10 +45,7 @@ $(document).ready(function() {
                             }
             });
         });                
-    }
-   
-    // Kick off script
-    document.addEventListener('VAPPReady', onBridgeIsReady, true);
+    }   
     function setQuestion(question){
         questionBody = question.body;
         questionAnswer = question.answer;
@@ -66,5 +53,8 @@ $(document).ready(function() {
         questionShow_ID = question.show_id;
         questionViewer_ID = question.viewer_id;
     }
+    // Kick off script
+    document.addEventListener('VAPPReady', onBridgeIsReady, true);
+    
 });
 
