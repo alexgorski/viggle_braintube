@@ -29,7 +29,7 @@ $(document).ready(function() {
           data: "title="+questionTitle,
           success: function(data){
             var parsedData = JSON.parse(data);
-            setQuestion(parsedData);};
+            setQuestion(parsedData);}
         });
         return false;
       }
