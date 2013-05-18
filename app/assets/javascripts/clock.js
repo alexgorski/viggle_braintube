@@ -17,7 +17,7 @@ $(document).ready(function() {
       $('#inputs').append("<button class='start' type='button' id='submit' value=''>Submit</button>");
     }
     
-    ShowQuestion(questionBody)
+    ShowQuestion(questionBody);
     function ShowQuestion(Question){
       $('.question').append(Question);
     }
@@ -31,7 +31,8 @@ $(document).ready(function() {
           url: "/questions",
           data: "name="+name+"&right="+correct+"&wrong="+incorrect+"&operator="+"a"+"&level="+lev,
           success: function(data){
-            setQuestion(JSON.parse(data));
+            var parsedData = JSON.parse(data);
+            setQuestion(parsedData);
           };
         });
         return false;
