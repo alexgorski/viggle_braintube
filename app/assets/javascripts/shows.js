@@ -59,8 +59,6 @@ $(document).ready(function() {
    
     // Kick off script
     document.addEventListener('VAPPReady', onBridgeIsReady, true);
-
-
     function setQuestion(question){
         questionBody = question.body;
         questionAnswer = question.answer;
@@ -68,5 +66,5 @@ $(document).ready(function() {
         questionShow_ID = question.show_id;
         questionViewer_ID = question.viewer_id;
     }
-})
+});
 
