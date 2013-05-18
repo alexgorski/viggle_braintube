@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
   $(".start").click(function() {
-    var Timer;
-    var TotalSeconds;
-    var question = questions[0]
+    var Timer,
+    var TotalSeconds,
+    var question = questions[0];
     
     CreateTimer("timer", 120);
     function CreateTimer(TimerID, Time) {
