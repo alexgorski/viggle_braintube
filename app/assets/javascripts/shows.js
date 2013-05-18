@@ -40,7 +40,7 @@ $(document).ready(function() {
                                         var parsedData = JSON.parse(data);
                                         setQuestion(parsedData);
                                       };
-                                    });
+                                    })
                                 });
                             }
             });
