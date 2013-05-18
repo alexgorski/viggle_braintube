@@ -1,17 +1,5 @@
 $(document).ready(function() {
-    var questionBody,
-    var questionAnswer,
-    var questionTitle,
-    var questionShow_ID,
-    var questionViewer_ID
-
-    function setQuestion(question){
-        questionBody = question.body;
-        questionAnswer = question.answer;
-        questionTitle = question.title;
-        questionShow_ID = question.show_id;
-        questionViewer_ID = question.viewer_id;
-    }
+    
     function onBridgeIsReady() {
     // Display our apps title in the header bar
 
@@ -71,5 +59,18 @@ $(document).ready(function() {
    
     // Kick off script
     document.addEventListener('VAPPReady', onBridgeIsReady, true);
+    var questionBody,
+    var questionAnswer,
+    var questionTitle,
+    var questionShow_ID,
+    var questionViewer_ID
+
+    function setQuestion(question){
+        questionBody = question.body;
+        questionAnswer = question.answer;
+        questionTitle = question.title;
+        questionShow_ID = question.show_id;
+        questionViewer_ID = question.viewer_id;
+    }
 });
 

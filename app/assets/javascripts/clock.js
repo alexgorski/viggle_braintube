@@ -1,8 +1,7 @@
 $(document).ready(function() {
 
   $(".start").click(function() {
-    var Timer,
-    var TotalSeconds
+    var Timer, TotalSeconds
     
     CreateTimer("timer", 120);
     function CreateTimer(TimerID, Time) {
@@ -18,8 +17,8 @@ $(document).ready(function() {
     }
     
     ShowQuestion(questionBody);
-    function ShowQuestion(Question){
-      $('.question').append(Question);
+    function ShowQuestion(question){
+      $('.question').append(question);
     }
       
     function Tick() {
@@ -42,7 +41,9 @@ $(document).ready(function() {
 
       UpdateTimer();
       
-      $('#submit').click(function(){StopTime(0);};
+      $('#submit').click(function(){
+        StopTime(0);
+      };
     }
 
     function UpdateTimer() {
