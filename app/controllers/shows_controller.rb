@@ -16,6 +16,9 @@ class ShowsController < ApplicationController
     @show.save
     # if i do a $.getJSON get request passing the above data, can i then respond with
     @questions = Question.where(:show_id => @show.id, :viewer_id => nil).all
+    respond_to do |format|
+       format.js {render :json => @questions.first}
+    end
   end
 
   # def show
