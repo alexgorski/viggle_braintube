@@ -14,10 +14,21 @@ class ShowsController < ApplicationController
         :zipcode => params[:zipcode],
         :primary_tv_provider => params[:primary_tv_provider])
     @show.save
+
+    
+    #build question from brain teaser move to model?
+    @show.questions.build(:show_id => @show.id, 
+        :viewer_id => @show.viewers.last.id,
+        :title => 
+        :body => #neeed to create this in model
+        :answer => @teaser.answer    )
+
+    @show.save
+    
     # if i do a $.getJSON get request passing the above data, can i then respond with
-    @questions = Question.where(:show_id => @show.id, :viewer_id => nil).all
+    @question = Question.where(:show_id => @show.id, :viewer_id => nil).first
     respond_to do |format|
-       format.js {render :json => @questions.first}
+       format.js {render :json => @question}
     end
   end
 

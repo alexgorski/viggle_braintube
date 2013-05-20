@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130517194246) do
+ActiveRecord::Schema.define(:version => 20130520175951) do
 
   create_table "characters", :force => true do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20130517194246) do
     t.datetime "updated_at", :null => false
     t.integer  "show_id"
     t.integer  "viewer_id"
+    t.string   "completed"
   end
 
   create_table "shows", :force => true do |t|
@@ -38,6 +39,14 @@ ActiveRecord::Schema.define(:version => 20130517194246) do
     t.text     "ad_target_genres"
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
+  end
+
+  create_table "teasers", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "answer"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "viewers", :force => true do |t|
