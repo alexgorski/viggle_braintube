@@ -12,7 +12,7 @@ $(document).ready(function() {
       $('#inputs').append("<button class='submit' type='button' id='submit' value=''>Submit</button>");}   
     ShowQuestion(questionBody);
     function ShowQuestion(question){
-      $('.question').append(question);}      
+      $('.question').innerHTML(question);}      
     function Tick() {
       if (TotalSeconds == 0) { 
         //use jQuery to add each element needed for data
@@ -20,10 +20,13 @@ $(document).ready(function() {
           //and pass it to rails viewers#update and get back next question
           type: "POST",
           url: "/questions",
-          data: "title="+questionTitle,
+          data: { title: questionTitle, body: questionBody, answer: questionAnswer,
+            show_id: questionShow_ID, viewer_id: questionViewer_ID,
+            teaser_id: questionTeaser_ID, questionCompleted: "Yes",
+            display_name: display_name, guid: guid, 
+             }
           success: function(data){
-            var parsedData = JSON.parse(data);
-            setQuestion(parsedData);}
+            ;}
         });
         return false;
       }

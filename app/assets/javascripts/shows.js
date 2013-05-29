@@ -35,10 +35,10 @@ $(document).ready(function() {
                                     $.ajax({
                                       type: "POST",
                                       url: "/shows",
-                                      data: "title="+showTitle+"&program_id="+showProgramId+"&category="+showCategory+"&ad_target_genres="+showAdTargetGenres+"&gender="+gender+"&display_name="+display_name+"&guid="+guid+"&zipcode="+zipcode+"&primary_tv_provider="+primary_tv_provider,
+                                      data: { title: showTitle, program_id: showProgramId, category: showCategory, ad_target_genres: showAdTargetGenres, gender: gender, display_name: display_name, guid: guid, zipcode: zipcode, primary_tv_provider: primary_tv_provider}
                                       success: function(data){
-                                        var parsedData = JSON.parse(data);
-                                        setQuestion(parsedData);
+                                        setQuestion(data);
+                                        displayQuestion;
                                       }
                                     });
                                 });
@@ -46,15 +46,20 @@ $(document).ready(function() {
             });
         });                
     }   
-    function setQuestion(question){
-        questionBody = question.body;
-        questionAnswer = question.answer;
-        questionTitle = question.title;
-        questionShow_ID = question.show_id;
-        questionViewer_ID = question.viewer_id;
+    function setQuestion(q){
+        questionBody = q.body;
+        questionAnswer = q.answer;
+        questionTitle = q.title;
+        questionShow_ID = q.show_id;
+        questionViewer_ID = q.viewer_id;
+        questionTeaser_ID = q.teaser_id;
+        questionCompleted = q.completed;
+    }
+    function displayQuestion(){
+        $('#question_body').innerHTML(questionBody);
+        $('#question_title').innerHTML(questionTitle);
     }
     // Kick off script
     document.addEventListener('VAPPReady', onBridgeIsReady, true);
     
 });
-

@@ -7,28 +7,19 @@ class ShowsController < ApplicationController
     @show.program_id = params[:program_id]
     @show.category = params[:category]
     @show.ad_target_genres = params[:ad_target_genres]
-    #need logic that builds a viewer
     @show.viewers.build(:gender => params[:gender],
         :display_name => params[:display_name], 
         :guid => params[:guid],
         :zipcode => params[:zipcode],
         :primary_tv_provider => params[:primary_tv_provider])
     @show.save
-
-    
-    #build question from brain teaser move to model?
-    @show.questions.build(:show_id => @show.id, 
-        :viewer_id => @show.viewers.last.id,
-        :title => 
-        :body => #neeed to create this in model
-        :answer => @teaser.answer    )
-
-    @show.save
+    @viewer = Viewer.find(:guid => params[:guid]) 
+    Question.make_questions(@show, @viewer)
     
     # if i do a $.getJSON get request passing the above data, can i then respond with
-    @question = Question.where(:show_id => @show.id, :viewer_id => nil).first
+    @question = Question.where(:show_id => @show.id, :viewer_id => @viewer.id, :completed => "No").first
     respond_to do |format|
-       format.js {render :json => @question}
+       format.json {render :json => @question}
     end
   end
 
