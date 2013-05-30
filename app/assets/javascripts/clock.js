@@ -8,8 +8,8 @@ $(document).ready(function() {
       UpdateTimer();}    
     CreateInputBox();
     function CreateInputBox(){  
-      $('#inputs').append("<input type='text' id='input'></input>");
-      $('#inputs').append("<button class='submit' type='button' id='submit' value=''>Submit</button>");}   
+      $('#inputs').innerHTML("<input type='text' id='input'></input>");
+      $('#inputs').innerHTML("<button class='submit' type='button' id='submit' value=''>Submit</button>");}   
     ShowQuestion(questionBody);
     function ShowQuestion(question){
       $('.question').innerHTML(question);}      
@@ -23,10 +23,10 @@ $(document).ready(function() {
           data: { title: questionTitle, body: questionBody, answer: questionAnswer,
             show_id: questionShow_ID, viewer_id: questionViewer_ID,
             teaser_id: questionTeaser_ID, questionCompleted: "Yes",
-            display_name: display_name, guid: guid, 
-             }
+            display_name: display_name, guid: guid }
           success: function(data){
-            ;}
+            setQuestion(data);
+            displayQuestion;}
         });
         return false;
       }

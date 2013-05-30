@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var questionBody, questionAnswer, questionTitle, questionShow_ID, questionViewer_ID;
+    var questionID, questionBody, questionAnswer, questionTitle, questionShow_ID, questionViewer_ID;
     function onBridgeIsReady() {
     // Display our apps title in the header bar
         VAPP.setTitleBarTitle(function(message) {}, 'Brain Tube');
@@ -47,6 +47,7 @@ $(document).ready(function() {
         });                
     }   
     function setQuestion(q){
+        questionID = q.id
         questionBody = q.body;
         questionAnswer = q.answer;
         questionTitle = q.title;
